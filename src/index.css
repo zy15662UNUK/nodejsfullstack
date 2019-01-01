@@ -12,3 +12,47 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.error-msg{
+    color:#f50;
+    padding-left:10px;
+    padding-top:10px;
+}
+
+.am-tab-bar{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height:auto;
+    z-index: -1000;
+
+}
+.fixd-header.am-navbar{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.page-content{
+    padding:45px 5px;
+}
+
+.chat-me .am-list-extra{
+    flex-basis:auto;
+}
+.chat-me .am-list-content{
+    text-align: right!important;
+}
+.am-grid-icon{
+    display: none;
+}
+.am-grid-text{
+    margin-top: 0;
+}
+.am-list-item{
+z-index: 100;
+}
+.stick-footer{
+    z-index:10;
+    position: absolute;
+    bottom: 0;
+    width:100%;
+}

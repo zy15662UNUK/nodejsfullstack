@@ -1,28 +1,26 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+import React from 'react';
+import AuthRouter from './component/authRouter/AuthRouter'
+import {Route, Switch} from 'react-router-dom'
+import Login from './container/login/Login'
+import Register from './container/register/Register'
+import BossInfo from './container/bossinfo/BossInfo'
+import GeniusInfo from './container/geniusinfo/GeniusInfo'
+import Chat from './component/chat/Chat'
+import Dashboard from './component/dashboard/Dashboard'
+export default class App extends React.Component{
+    render() {
+        return (
+            <div>
+                <AuthRouter/>
+                <Switch>
+                    <Route path="/login" component={Login}></Route>
+                    <Route path="/register" component={Register}></Route>
+                    <Route path="/bossinfo" component={BossInfo}></Route>
+                    <Route path="/geniusinfo" component={GeniusInfo}></Route>
+                    <Route path="/chat/:user" component={Chat}></Route>
+                    <Route component={Dashboard}></Route>
+                </Switch>
+            </div>
+        );
+    }
 }
-
-export default App;
